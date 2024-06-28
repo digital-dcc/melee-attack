@@ -1,22 +1,25 @@
 {
-  "name": "@lit/lit-starter-js",
-  "private": true,
+  "name": "@digital-dcc/armor-class",
+  "private": false,
   "version": "2.0.1",
   "description": "A simple web component",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "main": "melee-attack.js",
+  "module": "melee-attack.js",
   "type": "module",
+	"publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "echo \"This is not a TypeScript project, so no need to build.\"",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
-    "lint:lit-analyzer": "lit-analyzer my-element.js",
+    "lint:lit-analyzer": "lit-analyzer melee-attack.js",
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
     "docs": "npm run docs:clean && npm run analyze && npm run docs:build && npm run docs:assets && npm run docs:gen",
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/my-element.bundled.js",
+    "docs:build": "rollup -c --file docs/melee-attack.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "wds --root-dir=docs --node-resolve --watch",
     "analyze": "cem analyze --litelement --globs \"**/*.js\" --exclude docs",
@@ -28,7 +31,7 @@
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup -c ; cat melee-attack.bundled.js | gzip -9 | wc -c ; rm melee-attack.bundled.js"
   },
   "keywords": [
     "web-components",

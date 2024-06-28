@@ -1,22 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>&lt;my-element> Demo</title>
+    <title>&lt;melee-attack> Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../melee-attack.js"></script>
     <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
+      .wrapper {
+        display: flex;
+        gap: 10px;
       }
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <div class="wrapper">
+      <melee-attack strength="5"></melee-attack>
+      <melee-attack strength="13" weapon="Longsword"></melee-attack>
+      <melee-attack strength="18" weapon="Flail"></melee-attack>
+      <melee-attack strength="11" weapon="Mace"></melee-attack>
+      <melee-attack strength="7" weapon="Garrote"></melee-attack>
+      <melee-attack strength="14" weapon="Handaxe"></melee-attack>
+      <melee-attack strength="16" weapon="Javelin"></melee-attack>
+      <melee-attack strength="3" weapon="Polearm"></melee-attack>
+      <melee-attack strength="9" weapon="Short sword"></melee-attack>
+      <melee-attack strength="10" weapon="Two-handed sword"></melee-attack>
+      <melee-attack strength="10" weapon="Warhammer" attack-modifier-adjustment="+2" damage-modifier-adjustment="+2"></melee-attack>
+      <melee-attack strength="18" weapon="Two-handed sword" attack-modifier-override="+1"></melee-attack>
+      <melee-attack strength="18" weapon="Two-handed sword" damage-modifier-override="+1"></melee-attack>
+    </div>
   </body>
 </html>

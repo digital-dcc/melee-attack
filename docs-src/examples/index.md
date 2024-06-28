@@ -1,20 +1,20 @@
 ---
 layout: example.11ty.cjs
-title: <my-element> ⌲ Examples ⌲ Basic
+title: <melee-attack> ⌲ Examples ⌲ Basic
 tags: example
 name: Basic
 description: A basic example
 ---
 
 <style>
-  my-element p {
+  melee-attack p {
     border: solid 1px blue;
     padding: 8px;
   }
 </style>
-<my-element>
+<melee-attack>
   <p>This is child content</p>
-</my-element>
+</melee-attack>
 
 <h3>CSS</h3>
 
@@ -28,7 +28,7 @@ p {
 <h3>HTML</h3>
 
 ```html
-<my-element>
+<melee-attack>
   <p>This is child content</p>
-</my-element>
+</melee-attack>
 ```
